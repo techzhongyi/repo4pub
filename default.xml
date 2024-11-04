@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<manifest>
+    <!-- 
+    remote: 远程代码库配置
+    name: 远程仓库名，在使用 git clone 时默认为 origin
+    fetch: 远程仓库地址，用户和 project 节点中的 name 一起确定项目地址
+    -->
+    <!-- remote server -->
+    <remote
+        name="repo4pub"
+        fetch="git@github.com:techzhongyi/" />
+
+    <!--
+    default: 默认配置
+    remote: 默认使用的远程仓库
+    revision: 默认使用的分支
+    sync-j: 同步代码时的并发数
+    -->
+    <default
+        remote="repo4pub"
+        revision="etcdv1"
+        sync-j="1" />
+
+    <!--
+    project: 单个代码库配置
+    name: 项目地址，和指定的 remote 节点中的 fetch 一起组成仓库地址（fetch + name）
+    group: 项目所属分组，可选
+    path: 项目拉取到本地后所在目录
+    remote: 指定所在远程仓库
+    revision: 指定代码分支
+    -->
+    <!-- 这两个项目为我的私有项目，可换为自己的项目，[remote-fetch]+[project-name].git为clone项目地址-->
+    <!-- 例如这里为 https://gitee.com/aaaa_sss/test.git 是test的clone地址 -->
+    <project
+        name="httpCore"
+        path="httpCore"
+        />
+    <project
+        name="patchCore"
+        path="patchCore"
+        />
+    <project
+        name="comlibgo"
+        path="comlibgo"
+        />
+    <project
+        name="comlibpy"
+        path="comlibpy"
+        />
+</manifest>
+
