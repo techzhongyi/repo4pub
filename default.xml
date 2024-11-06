@@ -20,7 +20,7 @@
     <default
         remote="repo4pub"
         revision="etcdv1"
-        sync-j="1" />
+        sync-j="4" />
 
     <!--
     project: 单个代码库配置
